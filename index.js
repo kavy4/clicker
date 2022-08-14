@@ -2,7 +2,10 @@ let balance = 0, Xbalance = 1, Abalance = 0
 
 setInterval(() => {
     balance += Abalance
-    document.getElementById('main_balance').textContent = 'Баланс ' + balance
+    document.getElementById('main_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru')
+    document.getElementById('casino_cube_header_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
+    document.getElementById('main_Xbalance').textContent = Xbalance + ' коинов/клик'
+    document.getElementById('main_Abalance').textContent = Abalance + ' коинов/сек'
 }, 1000)
 
 let shopSucces = document.getElementsByClassName('shop_card_succes')
@@ -24,9 +27,7 @@ shopPrice2Title.textContent = 'Цена ' +  shopPrice2 + ' коинов'
 function Klick()
 {
     balance += Xbalance
-    document.getElementById('main_balance').textContent = 'Баланс ' + balance
-    document.getElementById('main_Xbalance').textContent = Xbalance + ' коинов/клик'
-    document.getElementById('main_Abalance').textContent = Abalance + ' коинов/сек'
+    document.getElementById('main_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru')
 }
 
 // shop
@@ -108,6 +109,7 @@ function CubeHide()
 {
     document.getElementById('casino_menu').style.display = 'none'
     document.getElementById('casino_cube').style.display = 'block'
+    document.getElementById('casino_cube_header_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
 }
 
 function CubeClose()
@@ -211,3 +213,19 @@ function CubeCasino()
 }
 
 // cube
+
+// transfer
+
+function TransferHide()
+{
+    document.getElementById('main').style.display = 'none'
+    document.getElementById('transfer').style.display = 'block'
+}
+
+function TransferClose()
+{
+    document.getElementById('transfer').style.display = 'none'
+    document.getElementById('main').style.display = 'block'
+}
+
+// transfer

@@ -3,18 +3,21 @@
     <head>
         <title>Кликер</title>
         <link rel="stylesheet" href="style.css">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="format-detection" content="date=no">
-        <meta name="format-detection" content="address=no">
-        <meta name="format-detection" content="email=no">
     </head>
 
     <body>
         <div id="page">
+            <div id="transfer">
+                <div id="transfer_menu_header">
+                    <button id="transfer_menu_button" onclick="TransferClose()"></button>
+                </div>
+            </div>
+
             <div id="casino">
                 <div id="casino_cube">
                     <div id="casino_cube_header">
                         <button id="casino_cube_header_button" onclick="CubeClose()">Назад</button>
+                        <p id="casino_cube_header_balance"></p>
                     </div>
 
                     <br>
@@ -143,7 +146,9 @@
                     <button class="main_nav" onclick="CasinoHide()">
                         <img src="img/cash-outline.svg" alt="casino" width="50px">
                     </button>
-                    <button class="main_nav"></button>
+                    <button class="main_nav" onclick="TransferHide()">
+                        <img src="img/card-outline.svg" width="50px" alt="cards">
+                    </button>
                 </nav>
                 
                 <button id="main_klicker_button" onclick="Klick()">
