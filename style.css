@@ -8,6 +8,7 @@ body
 button
 {
     cursor: pointer;
+    color: black;
 }
 
 #shop
