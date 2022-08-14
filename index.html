@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Кликер</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+
+    <body>
+        <div id="page">
+            <div id="casino">
+                <div id="casino_cube">
+                    <div id="casino_cube_header">
+                        <button id="casino_cube_header_button" onclick="CubeClose()">Назад</button>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <div id="casino_cube_card">
+                        <img src="img/cubs.jpg" id="casino_cube_card_photo"></img>
+
+                        <h3 id="casino_cube_card_title">Lorem ipsum dolor sit amet.</h3>
+
+                        <p id="casino_cube_card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum sit, nulla harum voluptas doloremque nemo.</p>
+                        
+                        <div id="casino_cube_card_input_group">
+                            <label id="casino_cube_card_input_group_title">Введите ставку</label>
+                            <input id="casino_cube_card_group_input">
+                        </div>
+
+                        <div id="casino_cube_card_select">
+                            <div class="casino_cube_card_select_group">
+                                <input type="radio" name="casino_cube_rb" value="1" class="casino_cube_card_select_rb">
+                                <label>Меньше 7(x2)</label>
+                            </div>
+                            
+                            <div class="casino_cube_card_select_group">
+                                <input type="radio" name="casino_cube_rb" value="2" class="casino_cube_card_select_rb">
+                                <label>Больше 7(x2)</label>
+                            </div>
+                            
+                            <div class="casino_cube_card_select_group">
+                                <input type="radio" name="casino_cube_rb" value="3" class="casino_cube_card_select_rb">
+                                <label>Равно 7(x5)</label>
+                            </div>
+                            <button id="casino_cube_card_select_button" onclick="SendCubeCheckBox()">Ну, давай</button>
+                            
+                        </div>
+
+                        <p id="casino_cube_card_succes" class="casino_cube_card_stats"></p>
+
+                        <p id="casino_cube_card_error" class="casino_cube_card_stats"></p>
+                    </div>
+                </div>
+
+                <div id="casino_menu">
+                    <div id="casino_menu_header">
+                        <button id="casino_menu_header_button" onclick="CasinoClose()">Домой</button>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <div class="casino_menu_mode">
+                        <div class="casino_menu_mode_card">
+                            <img src="img/cubs.jpg" class="casino_menu_mode_card_photo"></img>
+
+                            <div class="casino_menu_mode_card_title">Кости</div>
+
+                            <div class="casino_menu_mode_card_text">Суть проста, кудаются два игральных кубика. Необходимо предугадать исход события</div>
+
+                            <button class="casino_menu_mode_card_button" onclick="CubeHide()">Играть</button>
+                        </div>
+
+                        <div class="casino_menu_mode_card">
+                            <div class="casino_menu_mode_card_photo"></div>
+
+                            <div class="casino_menu_mode_card_title">Lorem</div>
+
+                            <div class="casino_menu_mode_card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eius.</div>
+
+                            <button class="casino_menu_mode_card_button">Играть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="shop">
+                <div id="shop_footer">
+                    <button id="shop_footer_button" onclick="ShopClose()">Играть</button>
+                </div>
+                
+                <br>
+                <br>
+                <br>
+
+                <div class="shop_card">
+                    <h3 class="shop_card_title">Кликер</h3>
+
+                    <p class="shop_card_text">Lorem ipsum dolor sit amet.</p>
+
+                    <p class="shop_card_price" id="shop_price1"></p>
+
+                    <button class="shop_card_button" onclick="BuyKlickerBAFF()">Купить</button>
+
+                    <div class="shop_card_succes" id="shop_card_succes1">Успешно!</div>
+
+                    <div class="shop_card_error" id="shop_card_error1">Ошибка! Не хватает денег</div>
+                </div>
+
+                <div class="shop_card">
+                    <h3 class="shop_card_title">Кликер</h3>
+
+                    <p class="shop_card_text">Lorem ipsum dolor sit amet.</p>
+
+                    <p class="shop_card_price" id="shop_price2"></p>
+
+                    <button class="shop_card_button" onclick="BuyAutoMoney()">Купить</button>
+
+                    <div class="shop_card_succes" id="shop_card_succes2">Успешно!</div>
+
+                    <div class="shop_card_error" id="shop_card_error2">Ошибка! Не хватает денег</div>
+                </div>
+            </div>
+
+            <div id="main">
+                <p id="main_balance">Баланс 0</p>
+
+                <p id="main_Xbalance">1 коинов/клик</p>
+
+                <p id="main_Abalance">0 коинов/сек</p>
+
+                <nav id="main_navs">
+                    <button class="main_nav" onclick="ShopHide()">
+                        <img src="img/basket-outline.svg" alt="shopping_bag" width="50px">
+                    </button>
+                    <button class="main_nav" onclick="CasinoHide()">
+                        <img src="img/cash-outline.svg" alt="casino" width="50px">
+                    </button>
+                    <button class="main_nav"></button>
+                </nav>
+                
+                <button id="main_klicker_button" onclick="Klick()">
+                    <div id="main_klicker_button_hade"></div>
+                </button>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,421 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, sans-serif;
+}
+
+button
+{
+    cursor: pointer;
+}
+
+#shop
+{
+    display: none;
+}
+
+#casino_cube
+{
+    display: none;
+}
+
+#casino
+{
+    display: none;
+}
+
+/* #main
+{
+    display: none;
+} */
+
+#page
+{
+    width: 400px;
+    height: 100%;
+    margin: auto;
+    /* background: rgba(0, 0, 0, 0.03); */
+    /* padding: 25px; */
+}
+
+/* КЛИКЕР */
+
+#main
+{
+    height: 100vh;
+}
+
+#main_klicker_button
+{
+    border: 0;
+    background: #ffe77d;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+#main_klicker_button:hover
+{
+    box-shadow: 0px 0px 10px 0px #c6c6c6;
+}
+
+#main_klicker_button_hade
+{
+    width: 225px;
+    height: 225px;
+    border-radius: 50%;
+    background: #fff1b5;
+    box-shadow: 0px 0px 20px 0px #aaaaaa;
+    margin: 0 auto;
+}
+
+#main_balance
+{
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0px auto;
+    display: block;
+    text-align: center;
+}
+
+#main_Xbalance, #main_Abalance
+{
+    text-align: center;
+    font-weight: 600;
+}
+
+#main_navs
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px auto;
+}
+
+.main_nav
+{
+    width: 100px;
+    height: 100px;
+    margin: 25px 0;
+    border: 0;
+    border-radius: 14px;
+    background: #ffedb0;
+    box-shadow: 0px 0px 20px 0px #999999;
+    transition: 0.3s;
+}
+
+.main_nav:hover
+{
+    transform: translate(0, -5px);
+}
+
+/* КЛИКЕР */
+
+/* shop */
+
+#shop
+{
+    padding-top: 1px;
+}
+
+.shop_card
+{
+    width: 90%;
+    border-radius: 14px;
+    box-shadow: 0px 20px 20px 0 #d7d7d7;
+    margin: 30px auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.shop_card_title
+{
+    margin: 0;
+}
+
+.shop_card_price
+{
+    font-weight: 600;
+}
+
+.shop_card_button
+{
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background: #ffe77d;
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+.shop_card_button:hover
+{
+    box-shadow: 0 0 20px 0 #ffe77d;
+}
+
+.shop_card_succes, .shop_card_error
+{
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 14px;
+    background: #1ac400;
+    margin: 10px 0;
+    display: none;
+}
+
+.shop_card_error
+{
+    background: red;
+}
+
+#shop_footer
+{
+    width: 400px;
+    height: 75px;
+    box-shadow: 0px 0px 20px 0 #aaaaaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: white;
+    border-radius: 14px;
+}
+
+#shop_footer_button
+{
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background: #ffe77d;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#shop_footer_button:hover
+{
+    box-shadow: 0 0 20px 0 #ffe77d;
+}
+
+/* shop */
+
+/* casino */
+
+#casino_menu_header
+{
+    width: 400px;
+    height: 75px;
+    box-shadow: 0px 0px 20px 0 #aaaaaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: white;
+    border-radius: 14px;
+}
+
+#casino_menu_header_button
+{
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background: #ffe77d;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#casino_menu_header_button:hover
+{
+    box-shadow: 0 0 20px 0 #ffe77d;
+}
+
+.casino_menu_mode_card_photo
+{
+    width: 75px;
+    height: 75px;
+    background: #1ac400;
+}
+
+.casino_menu_mode_card
+{
+    width: 85%;
+    border-radius: 14px;
+    box-shadow: 0px 20px 20px 0 #d7d7d7;
+    margin: 30px auto;
+    padding: 20px 20px 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.casino_menu_mode_card_title
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.casino_menu_mode_card_text
+{
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.casino_menu_mode_card_button
+{
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background: #ffe77d;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 20px auto;
+    transition: 0.5s;
+}
+
+.casino_menu_mode_card_button:hover
+{
+    box-shadow: 0 0 20px 0 #ffe77d;
+}
+
+/* casino */
+
+/* casino cube */
+
+#casino_cube_header
+{
+    width: 400px;
+    height: 75px;
+    box-shadow: 0px 0px 20px 0 #aaaaaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: white;
+    border-radius: 14px;
+}
+
+#casino_cube_header_button
+{
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background: #ffe77d;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#casino_cube_header_button:hover
+{
+    box-shadow: 0 0 20px 0 #ffe77d;
+}
+
+#casino_cube_card_photo
+{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: #1ac400;
+    margin: 0 auto;
+}
+
+#casino_cube_card
+{
+    width: 80%;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 0 20px 0 black;
+    margin: 30px auto;
+    box-shadow: 0px 20px 20px 0 #d7d7d7;
+}
+
+#casino_cube_card_title
+{
+    text-align: center;
+}
+
+#casino_cube_card_group_input, #casino_cube_card_group_input:focus
+{
+    border: 0;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+#casino_cube_card_select_button
+{
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background: #ffe77d;
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    transition: 0.5s;
+}
+
+#casino_cube_card_select_button:hover
+{
+    box-shadow: 0 0 20px 0 #ffe77d; 
+}
+
+#casino_cube_card_input_group_title
+{
+    font-weight: 600;
+}
+
+#casino_cube_card_input_group
+{
+    margin: 20px 0 10px 0;
+}
+
+#casino_cube_card_select
+{
+    padding: 10px 20px;
+    font-weight: 600;
+    display: block;
+    margin: 0 auto;
+}
+
+.casino_cube_card_select_group
+{
+    margin: 5px auto;
+}
+
+#casino_cube_card_succes
+{
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 14px;
+    background: #1ac400;
+    font-weight: 600;
+    font-size: 18px;
+    display: none;
+}
+
+#casino_cube_card_error
+{
+    padding: 10px 30px;
+    border-radius: 14px;
+    background: red;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    display: none;
+}
+
+/* casino cube */
