@@ -10,22 +10,7 @@ button
     cursor: pointer;
 }
 
-#transfer
-{
-    display: none;
-}
-
-#shop
-{
-    display: none;
-}
-
-#casino_cube
-{
-    display: none;
-}
-
-#casino
+#shop, #transfer, #transfer_send, #transfer_get, #casino_cube, #casino
 {
     display: none;
 }
@@ -80,7 +65,7 @@ button
 
 #main_balance
 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     margin: 0px auto;
     display: block;
@@ -190,9 +175,9 @@ button
     height: 75px;
     box-shadow: 0px 0px 20px 0 #aaaaaa;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    position: fixed;
+    position: sticky;
     background: white;
     border-radius: 14px;
 }
@@ -213,6 +198,11 @@ button
     box-shadow: 0 0 20px 0 #ffe77d;
 }
 
+#shop_footer_balance
+{
+    font-weight: 600;
+}
+
 /* shop */
 
 /* casino */
@@ -225,7 +215,7 @@ button
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: sticky;
     background: white;
     border-radius: 14px;
 }
@@ -306,10 +296,7 @@ button
     width: 400px;
     height: 75px;
     box-shadow: 0px 0px 20px 0 #aaaaaa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
+    position: sticky;
     background: white;
     border-radius: 14px;
     display: flex;
@@ -362,7 +349,7 @@ button
     text-align: center;
 }
 
-#casino_cube_card_group_input, #casino_cube_card_group_input:focus
+#casino_cube_card_form_input
 {
     border: 0;
     border-bottom: 1px solid #aaaaaa;
@@ -387,7 +374,7 @@ button
     box-shadow: 0 0 20px 0 #ffe77d; 
 }
 
-#casino_cube_card_input_group_title
+#casino_cube_card_form_label
 {
     font-weight: 600;
 }
@@ -433,3 +420,260 @@ button
 }
 
 /* casino cube */
+
+/* transfer */
+
+#transfer_menu_header
+{
+    width: 400px;
+    height: 75px;
+    box-shadow: 0px 0px 20px 0 #aaaaaa;
+    position: sticky;
+    background: white;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+}
+
+#transfer_menu_header_button
+{
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background: #ffe77d;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#transfer_menu_header_button:hover
+{
+    box-shadow: 0 0 20px 0 #ffe77d;
+}
+
+.transfer_menu_card
+{
+    width: 85%;
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: 0px 20px 20px 0 #d7d7d7;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.transfer_menu_card_button
+{
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background: #ffe77d;
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+    transition: 0.5s;
+}
+
+.transfer_menu_card_button:hover
+{
+    box-shadow: 0 0 20px 0 #ffe77d;
+}
+/* transfer */
+
+/* transfer_send */
+
+#transfer_send_header
+{
+    width: 400px;
+    height: 75px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 20px 0 #aaaaaa;
+    position: sticky;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#transfer_send_header_button
+{
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background: #ffe77d;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#transfer_send_header_button:hover
+{
+    box-shadow: 0 0 20px 0 #ffe77d;
+}
+
+#transfer_send_header_balance
+{
+    font-weight: 600;
+}
+
+#transfer_send_card
+{
+    width: 75%;
+    border-radius: 14px;
+    box-shadow: 0px 20px 20px 0 #d7d7d7;
+    margin: 30px auto;
+    padding: 30px;
+}
+
+#transfer_send_card_title
+{
+    margin: 0;
+    text-align: center;
+}
+
+#transfer_send_card_form_label
+{
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#transfer_send_card_form_input
+{
+    border: 0;
+    border-bottom: 1px solid #aaaaaa;
+    display: block;
+    margin: 20px auto;
+}
+
+#transfer_send_card_form_button
+{
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background: #ffe77d;
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+    transition: 0.5s;
+}
+
+#transfer_send_card_form_button:hover
+{
+    box-shadow: 0 0 20px 0 #ffe77d;
+}
+
+#transfer_send_card_succes
+{
+    display: none;
+    background: #1ac400;
+    padding: 10px 20px;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#transfer_send_card_error
+{
+    display: none;
+    background: red;
+    padding: 10px 0;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.transfer_send_card_stats
+{
+    margin-top: 10px;
+}
+
+/* transfer_send */
+
+/* transfer_get */
+
+#transfer_get_header
+{
+    width: 400px;
+    height: 75px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 20px 0 #aaaaaa;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+}
+
+#transfer_get_header_button
+{
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background: #ffe77d;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#transfer_get_header_button:hover
+{
+    box-shadow: 0 0 20px 0 #ffe77d;
+}
+
+#transfer_get_header_balance
+{
+    font-weight: 600;
+}
+
+#transfer_get_card
+{
+    width: 75%;
+    border-radius: 14px;
+    box-shadow: 0px 20px 20px 0 #d7d7d7;
+    margin: 30px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+#transfer_get_card_title
+{
+    margin: 0;
+}
+
+#transfer_get_card_form_label
+{
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#transfer_get_card_form_input
+{
+    display: block;
+    margin: 20px auto;
+    border: 0;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+#transfer_get_card_form_button
+{
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background: #ffe77d;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#transfer_get_card_form_button:hover
+{
+    box-shadow: 0 0 20px 0 #ffe77d;
+}
+
+/* transfer_get */

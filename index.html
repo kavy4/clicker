@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
     <head>
+        <meta name="viewport" content="width=device-width">
         <title>Кликер</title>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -8,8 +9,74 @@
     <body>
         <div id="page">
             <div id="transfer">
-                <div id="transfer_menu_header">
-                    <button id="transfer_menu_button" onclick="TransferClose()"></button>
+                <div id="transfer_get">
+                    <div id="transfer_get_header">
+                        <button id="transfer_get_header_button" onclick="TransferGetClose()">Назад</button>
+                        <p id="transfer_get_header_balance"></p>
+                    </div>
+
+                    <div id="transfer_get_card">
+                        <h2 id="transfer_get_card_title">Получение перевода</h2>
+
+                        <p id="transfer_get_card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio iure explicabo excepturi accusantium, nulla vitae?</p>
+
+                        <div id="transfer_get_card_form">
+                            <label id="transfer_get_card_form_label">Введите сумму</label>
+                            <input id="transfer_get_card_form_input">
+                            <button id="transfer_get_card_form_button" onclick="TransferGetSendForm()">Готово</button>
+                        </div>
+
+                        <div id="transfer_get_card_succes" class="transfer_get_card_stats"></div>
+
+                        <div id="transfer_get_card_error" class="transfer_get_card_stats"></div>
+
+                    </div>
+                </div>
+
+                <div id="transfer_send">
+                    <div id="transfer_send_header">
+                        <button id="transfer_send_header_button" onclick="TransferSendClose()">Назад</button>
+
+                        <p id="transfer_send_header_balance"></p>
+                    </div>
+
+                    <div id="transfer_send_card">
+                        <h2 id="transfer_send_card_title">Перевод коинов</h2>
+
+                        <p id="transfer_send_card_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate nemo aspernatur illo nulla nisi neque.</p>
+
+                        <div id="transfer_send_card_form">
+                            <label id="transfer_send_card_form_label">Введите сумму</label>
+                            <input id="transfer_send_card_form_input">
+                            <button id="transfer_send_card_form_button" onclick="TransferSendForm()">Готово</button>
+                        </div>
+
+                        <div id="transfer_send_card_succes" class="transfer_send_card_stats">Успех</div>
+
+                        <div id="transfer_send_card_error" class="transfer_send_card_stats">Ошибка</div>
+                    </div>
+                </div>
+
+                <div id="transfer_menu">
+                    <div id="transfer_menu_header">
+                        <button id="transfer_menu_header_button" onclick="TransferClose()">Домой</button>
+                    </div>
+
+                    <div class="transfer_menu_card">
+                        <h2 class="transfer_menu_card_title">Отправить</h2>
+
+                        <p class="transfer_menu_card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis laudantium rerum unde provident quibusdam id?</p>
+
+                        <button class="transfer_menu_card_button" onclick="TransferSendHide()">Перейти</button>
+                    </div>
+
+                    <div class="transfer_menu_card">
+                        <h2 class="transfer_menu_card_title">Получить</h2>
+
+                        <p class="transfer_menu_card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis laudantium rerum unde provident quibusdam id?</p>
+
+                        <button class="transfer_menu_card_button" onclick="TransferGetHide()">Перейти</button>
+                    </div>
                 </div>
             </div>
 
@@ -20,10 +87,6 @@
                         <p id="casino_cube_header_balance"></p>
                     </div>
 
-                    <br>
-                    <br>
-                    <br>
-
                     <div id="casino_cube_card">
                         <img src="img/cubs.jpg" id="casino_cube_card_photo"></img>
 
@@ -31,9 +94,9 @@
 
                         <p id="casino_cube_card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum sit, nulla harum voluptas doloremque nemo.</p>
                         
-                        <div id="casino_cube_card_input_group">
-                            <label id="casino_cube_card_input_group_title">Введите ставку</label>
-                            <input id="casino_cube_card_group_input">
+                        <div id="casino_cube_card_form">
+                            <label id="casino_cube_card_form_label">Введите ставку</label>
+                            <input id="casino_cube_card_form_input">
                         </div>
 
                         <div id="casino_cube_card_select">
@@ -66,10 +129,6 @@
                         <button id="casino_menu_header_button" onclick="CasinoClose()">Домой</button>
                     </div>
 
-                    <br>
-                    <br>
-                    <br>
-
                     <div class="casino_menu_mode">
                         <div class="casino_menu_mode_card">
                             <img src="img/cubs.jpg" class="casino_menu_mode_card_photo"></img>
@@ -97,11 +156,8 @@
             <div id="shop">
                 <div id="shop_footer">
                     <button id="shop_footer_button" onclick="ShopClose()">Играть</button>
+                    <p id="shop_footer_balance"></p>
                 </div>
-                
-                <br>
-                <br>
-                <br>
 
                 <div class="shop_card">
                     <h3 class="shop_card_title">Кликер</h3>
@@ -133,7 +189,7 @@
             </div>
 
             <div id="main">
-                <p id="main_balance">Баланс 0</p>
+                <p id="main_balance">Баланс 0 коинов</p>
 
                 <p id="main_Xbalance">1 коинов/клик</p>
 

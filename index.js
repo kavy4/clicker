@@ -2,8 +2,11 @@ let balance = 0, Xbalance = 1, Abalance = 0
 
 setInterval(() => {
     balance += Abalance
-    document.getElementById('main_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru')
+    document.getElementById('main_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
+    document.getElementById('transfer_get_header_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
     document.getElementById('casino_cube_header_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
+    document.getElementById('shop_footer_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
+    document.getElementById('transfer_send_header_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
     document.getElementById('main_Xbalance').textContent = Xbalance + ' коинов/клик'
     document.getElementById('main_Abalance').textContent = Abalance + ' коинов/сек'
 }, 1000)
@@ -27,7 +30,7 @@ shopPrice2Title.textContent = 'Цена ' +  shopPrice2 + ' коинов'
 function Klick()
 {
     balance += Xbalance
-    document.getElementById('main_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru')
+    document.getElementById('main_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
 }
 
 // shop
@@ -128,6 +131,7 @@ var cubeInput
 
 function SendCubeCheckBox()
 {
+    console.log('dqwdqwdqwd')
     for (let el of document.getElementsByClassName('casino_cube_card_stats'))
     {
         el.style.display = 'none'
@@ -142,8 +146,8 @@ function SendCubeCheckBox()
         }
     }
 
-    cubeInput = document.getElementById('casino_cube_card_group_input').value
-    if (balance >= cubeInput)
+    cubeInput = document.getElementById('casino_cube_card_form_input').value
+    if (balance >= cubeInput && cubeInput > 0)
     {
         CubeCasino()
     }
@@ -152,6 +156,7 @@ function SendCubeCheckBox()
         document.getElementById('casino_cube_card_error').textContent = 'Ошибка! Не хвает денег'
         document.getElementById('casino_cube_card_error').style.display = 'block'
     }
+    cubeInput = document.getElementById('casino_cube_card_form_input').value = ''
 }
 
 function CubeCasino()
@@ -229,3 +234,63 @@ function TransferClose()
 }
 
 // transfer
+
+// transferSend
+
+function TransferSendHide()
+{
+    document.getElementById('transfer_menu').style.display = 'none'
+    document.getElementById('transfer_send').style.display = 'block'
+}
+
+function TransferSendClose()
+{
+    for (let el of document.getElementsByClassName('transfer_send_card_stats'))
+    {
+        el.style.display = 'none'
+    }
+    document.getElementById('transfer_menu').style.display = 'block'
+    document.getElementById('transfer_send').style.display = 'none'
+}
+
+function TransferSendForm()
+{
+    for (let el of document.getElementsByClassName('transfer_send_card_stats'))
+    {
+        el.style.display = 'none'
+    }
+    if (balance >= document.getElementById('transfer_send_card_form_input').value && document.getElementById('transfer_send_card_form_input').value > 0)
+    {
+        balance -= document.getElementById('transfer_send_card_form_input').value
+        document.getElementById('transfer_send_card_succes').textContent = 'Успешно! Скопируй и перешли это получателю: ' + document.getElementById('transfer_send_card_form_input').value
+        document.getElementById('transfer_send_card_succes').style.display = 'block'
+    }
+    else
+    {
+        document.getElementById('transfer_send_card_error').textContent = 'Ошибка! Не хватает денег'
+        document.getElementById('transfer_send_card_error').style.display = 'block'
+    }
+}
+
+// transferSend
+
+// transferGet
+
+function TransferGetHide()
+{
+    document.getElementById('transfer_menu').style.display = 'none'
+    document.getElementById('transfer_get').style.display = 'block'
+}
+
+function TransferGetClose()
+{
+    document.getElementById('transfer_get').style.display = 'none'
+    document.getElementById('transfer_menu').style.display = 'block'
+}
+
+function TransferGetSendForm()
+{
+    balance += Number(document.getElementById('transfer_get_card_form_input').value)
+}
+
+// transferGet
