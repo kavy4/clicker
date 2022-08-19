@@ -2,7 +2,7 @@ let balance = 0, Xbalance = 1, Abalance = 0
 
 setInterval(() => {
     balance += Abalance
-    document.getElementById('main_balance').textContent = 'sdfsdfsf ' + (balance).toLocaleString('ru') + ' коинов'
+    document.getElementById('main_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
     document.getElementById('transfer_get_header_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
     document.getElementById('casino_cube_header_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
     document.getElementById('shop_footer_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
@@ -129,9 +129,14 @@ var cubeCheckboxValue
 
 var cubeInput
 
-function AllIn()
+function CubeAllIn()
 {
     document.getElementById('casino_cube_card_form_input').value = balance
+}
+
+function CubeX05()
+{
+    document.getElementById('casino_cube_card_form_input').value = balance / 2
 }
 
 function SendCubeCheckBox()
