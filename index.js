@@ -2,7 +2,7 @@ let balance = 0, Xbalance = 1, Abalance = 0
 
 setInterval(() => {
     balance += Abalance
-    document.getElementById('main_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
+    document.getElementById('main_balance').textContent = 'sdfsdfsf ' + (balance).toLocaleString('ru') + ' коинов'
     document.getElementById('transfer_get_header_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
     document.getElementById('casino_cube_header_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
     document.getElementById('shop_footer_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
@@ -129,9 +129,13 @@ var cubeCheckboxValue
 
 var cubeInput
 
+function AllIn()
+{
+    document.getElementById('casino_cube_card_form_input').value = balance
+}
+
 function SendCubeCheckBox()
 {
-    console.log('dqwdqwdqwd')
     for (let el of document.getElementsByClassName('casino_cube_card_stats'))
     {
         el.style.display = 'none'
@@ -270,6 +274,7 @@ function TransferSendForm()
         document.getElementById('transfer_send_card_error').textContent = 'Ошибка! Не хватает денег'
         document.getElementById('transfer_send_card_error').style.display = 'block'
     }
+    document.getElementById('transfer_send_card_form_input').value = ''
 }
 
 // transferSend
@@ -284,13 +289,28 @@ function TransferGetHide()
 
 function TransferGetClose()
 {
+    for (let el of document.getElementsByClassName('transfer_get_card_stats'))
+    {
+        el.style.display = 'none'
+    }
     document.getElementById('transfer_get').style.display = 'none'
     document.getElementById('transfer_menu').style.display = 'block'
 }
 
 function TransferGetSendForm()
 {
-    balance += Number(document.getElementById('transfer_get_card_form_input').value)
+    if (Number(document.getElementById('transfer_get_card_form_input').value) > 0)
+    {
+        balance += Number(document.getElementById('transfer_get_card_form_input').value)
+        document.getElementById('transfer_get_card_succes').textContent = 'Успешно! На ваш баланс начисленно ' + document.getElementById('transfer_get_card_form_input').value + ' коинов'
+        document.getElementById('transfer_get_card_succes').style.display = 'block'
+    }
+    else
+    {
+        document.getElementById('transfer_get_card_error').textContent = 'Ошибка!'
+        document.getElementById('transfer_get_card_error').style.display = 'block'
+    }
+    document.getElementById('transfer_get_card_form_input').value = ''
 }
 
 // transferGet

@@ -8,6 +8,7 @@ body
 button
 {
     cursor: pointer;
+    -webkit-appearance: none;
 }
 
 #shop, #transfer, #transfer_send, #transfer_get, #casino_cube, #casino
@@ -353,6 +354,16 @@ button
 {
     border: 0;
     border-bottom: 1px solid #aaaaaa;
+    width: 35%;
+}
+
+#casino_cube_card_form_all_button
+{
+    border: 0;
+    background: #ffedb0;
+    border-radius: 100px;
+    outline: 1px solid black;
+    font-weight: 600;
 }
 
 #casino_cube_card_select_button
@@ -674,6 +685,30 @@ button
 #transfer_get_card_form_button:hover
 {
     box-shadow: 0 0 20px 0 #ffe77d;
+}
+
+#transfer_get_card_error
+{
+    margin: 20px auto;
+    display: none;
+    background: red;
+    padding: 10px 0;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#transfer_get_card_succes
+{
+    display: none;
+    margin: 20px auto;
+    background: #1ac400;
+    padding: 10px 20px;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
 }
 
 /* transfer_get */
