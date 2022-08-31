@@ -1,6 +1,7 @@
 let balance = 0, Xbalance = 1, Abalance = 0
 
-setInterval(() => {
+setInterval(() =>
+{
     balance += Abalance
     document.getElementById('main_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
     document.getElementById('transfer_get_header_balance').textContent = 'Баланс ' + (balance).toLocaleString('ru') + ' коинов'
@@ -25,7 +26,7 @@ let shopPrice2 = 100
 
 let shopPrice2Title = document.getElementById('shop_price2')
 
-shopPrice2Title.textContent = 'Цена ' +  shopPrice2 + ' коинов'
+shopPrice2Title.textContent = 'Цена ' + shopPrice2 + ' коинов'
 
 function Klick()
 {
